@@ -1,0 +1,29 @@
+---
+// Este es el área de metadatos del componente
+---
+<header class="relative h-[300px] sm:h-[400px] md:h-[500px]">
+    <img src="/assets/mariachi-prin.jpg" alt="Mariachi" class="w-full h-full object-cover">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <h1 class="absolute top-0 left-0 ml-10 mt-10 text-white text-2xl sm:text-3xl md:text-4xl">MARIACHI ERIAN DE MÉXICO</h1>
+    <h2 class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-xl sm:text-2xl md:text-3xl text-center">"Celebra con estilo,<br> celebra con mariachi"</h2>
+</header>
+<div class="w-full bg-red-800 h-10 flex items-center justify-center text-white">
+    <p class="text-sm sm:text-base md:text-lg"><span class="mr-5">+51 999 999 999</span><span class="ml-5">Av. Tomas Valle xxxxx</span></p>
+</div>
+<nav class="w-full bg-green-800 p-4 text-white sticky top-0">
+    <div class="container mx-auto flex justify-center">
+        <a href="" class="px-3 mx-2 sm:mx-4 nav-link">INICIO</a>
+        <a href="#nosotros" class="px-3 mx-2 sm:mx-4 nav-link">NOSOTROS</a>
+        <a href="#paquetes" class="px-3 mx-2 sm:mx-4 nav-link">PAQUETES</a>
+        <a href="#obsequios" class="px-3 mx-2 sm:mx-4 nav-link">OBSEQUIOS</a>
+    </div>
+</nav>
+<script>
+    const links = document.querySelectorAll('.nav-link');
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            links.forEach(link => link.classList.remove('bg-green-900'));
+            link.classList.add('bg-green-900');
+        });
+    });
+</script>
